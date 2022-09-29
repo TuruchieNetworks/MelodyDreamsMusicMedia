@@ -16,4 +16,4 @@ const Profiles = ( user, signIn) => {
   )
 }
 
-export default withAuthenticator (Profiles);
+export default (Profiles);
