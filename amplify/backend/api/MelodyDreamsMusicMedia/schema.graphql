@@ -1,0 +1,11 @@
+type MelodyDreams @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  username: String
+  about: String
+  track: String
+  image: String
+  followers: Int
+  following: Int
+  like: Boolean
+  likes: Int
+}

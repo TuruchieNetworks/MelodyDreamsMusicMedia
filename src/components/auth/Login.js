@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-  Footer 
+  MarketingFooter 
 } from '../../ui-components';
 
 const Login = () => {
@@ -32,7 +32,6 @@ const Login = () => {
     <p class="my-1">
       Don't have an account? <a href="register.html">Sign Up</a>
     </p>
-    {/* <Footer width = {"100%"} /> */}
   </section>
     </section>
   )

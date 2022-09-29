@@ -1,0 +1,21 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-melodydreamsmusicmed-staging-22626-authRole",
+      "UnauthRoleArn": "arn:aws:iam::825899528470:role/amplify-melodydreamsmusicmed-staging-22626-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::825899528470:role/amplify-melodydreamsmusicmed-staging-22626-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-melodydreamsmusicmed-staging-22626-deployment",
+      "UnauthRoleName": "amplify-melodydreamsmusicmed-staging-22626-unauthRole",
+      "StackName": "amplify-melodydreamsmusicmed-staging-22626",
+      "StackId": "arn:aws:cloudformation:us-east-1:825899528470:stack/amplify-melodydreamsmusicmed-staging-22626/1e732a40-3f9e-11ed-b825-0a2ce192795b",
+      "AmplifyAppId": "d1veoewke3hz5s"
+    },
+    "categories": {
+      "auth": {
+        "melodydreamsmediaplayer": {},
+        "true": {}
+      }
+    }
+  }
+}

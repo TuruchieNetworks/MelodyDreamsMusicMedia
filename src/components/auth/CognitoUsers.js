@@ -10,8 +10,7 @@ const CognitoUsers = ({signOut, user}) => {
   return (
     <section className='profilecontainer'>
       <div className='innerprofilecontainer'>
-        <ProfileCollection />
-        {/* <Footer width = {"100%"} /> */}
+        <ProfileCollection className='profilecontainer' />
       </div>
     </section>
   )

@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 // import { setAlert } from '../../actions/alert';
 // import propTypes from 'prop-types';
 import { 
-  Footer 
+  MarketingFooter 
 } from '../../ui-components';
 
 
@@ -82,7 +82,7 @@ const Register = () => {
         Already have an account? <Link to='/Login'>Sign In</Link>
       </p>
     </div>
-    <Footer width = {"100%"} />
+    <MarketingFooter width = {"100%"} />
     </section>
     
     </Fragment>
