@@ -6,21 +6,28 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
 import { Button, Flex, Image, Text } from "@aws-amplify/ui-react";
 import MyIcon from "./MyIcon";
 export default function ProfileCard(props) {
   const { melodyDreams, overrides, ...rest } = props;
+  const buttonOnClick = useNavigateAction({
+    type: "url",
+    url: melodyDreams?.id,
+  });
   return (
     <Flex
-      gap="24px"
+      gap="20px"
       direction="column"
-      width="320px"
+      justifyContent="center"
       alignItems="center"
-      overflow="hidden"
       position="relative"
+      border="1px SOLID rgba(0,0,0,1)"
       borderRadius="7px"
-      padding="24px 24px 24px 24px"
+      padding="95px 104px 95px 104px"
       backgroundColor="rgba(255,255,255,1)"
       {...rest}
       {...getOverrideProps(overrides, "ProfileCard")}
@@ -121,16 +128,18 @@ export default function ProfileCard(props) {
       <Button
         display="flex"
         gap="0"
+        width="272px"
         justifyContent="center"
         alignItems="center"
         shrink="0"
-        alignSelf="stretch"
-        objectFit="cover"
         position="relative"
         size="large"
         isDisabled={false}
         variation="primary"
         children="View Profile"
+        onClick={() => {
+          buttonOnClick();
+        }}
         {...getOverrideProps(overrides, "Button")}
       ></Button>
     </Flex>

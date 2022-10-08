@@ -5,7 +5,7 @@
  **************************************************************************/
 
 export { default as StandardCard } from "./StandardCard";
-export { default as Ampligram } from "./Ampligram";
+export { default as Profilepage } from "./Profilepage";
 export { default as SideBar } from "./SideBar";
 export { default as Features2x2 } from "./Features2x2";
 export { default as ProfileCollection } from "./ProfileCollection";
@@ -15,6 +15,7 @@ export { default as ReviewCard } from "./ReviewCard";
 export { default as ProfileCard } from "./ProfileCard";
 export { default as ItemCard } from "./ItemCard";
 export { default as ContactUs } from "./ContactUs";
+export { default as ProfilepageCollection } from "./ProfilepageCollection";
 export { default as NavBar } from "./NavBar";
 export { default as FormCheckout } from "./FormCheckout";
 export { default as EditProfile } from "./EditProfile";

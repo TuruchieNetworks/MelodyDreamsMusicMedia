@@ -6,11 +6,15 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { MelodyDreams } from "../models";
-import { FlexProps } from "@aws-amplify/ui-react";
-export declare type ProfileCardProps = React.PropsWithChildren<Partial<FlexProps> & {
-    melodyDreams?: MelodyDreams;
+import { ProfilepageProps } from "./Profilepage";
+import { CollectionProps } from "@aws-amplify/ui-react";
+export declare type ProfilepageCollectionProps = React.PropsWithChildren<Partial<CollectionProps<any>> & {
+    items?: any[];
+    overrideItems?: (collectionItem: {
+        item: any;
+        index: number;
+    }) => ProfilepageProps;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function ProfileCard(props: ProfileCardProps): React.ReactElement;
+export default function ProfilepageCollection(props: ProfilepageCollectionProps): React.ReactElement;

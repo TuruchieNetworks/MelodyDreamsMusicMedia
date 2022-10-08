@@ -1,32 +1,50 @@
 // import axios from 'axios';
-import React, { Fragment, useEffect, useState } from 'react';
 // import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 // import { setAlert } from '../../actions/alert';
 // import propTypes from 'prop-types';
+import React, { Fragment, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   MarketingFooter 
 } from '../../ui-components';
+import { Authenticator } from '@aws-amplify/ui-react';
+import { withAuthenticator } from '@aws-amplify/ui-react';
 
 
 const Register = () => {
   const [formData, setFormData] = useState({
     name: '',
+    username: '',
     email: '',
     password: '',
     password2:  ''
   });
 
-  const { name, email, password, password2 } = formData;
+  const { name, username, email, password, password2 } = formData;
 
   const onChange = e => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   const onSubmit = async e => {
     e.preventDefault();
     if (password !== password2) {
-      console.log('passwords do not match', 'danger');
+      console.log('passwords do not match');
     } else {
       console.log('success!')
+      const newUser = {
+        name,
+        username,
+        email,
+        password,
+        password2
+      }
+
+    //   try {
+    //     const { newUser } = await Authenticator.SignUp({name, username, email, password, password2 });
+    //     console.log(newUser);
+    // } catch (error) {
+    //     console.log('error signing up:', error);
+    // }
+
     }
   }
   return (
@@ -41,6 +59,15 @@ const Register = () => {
           placeholder="Name" 
           name="name" 
           value={name} 
+          onChange={e => onChange(e)} 
+          required />
+        </div>
+        <div className="form-group">
+          <input 
+          type="text" 
+          placeholder="Username" 
+          name="username" 
+          value={username} 
           onChange={e => onChange(e)} 
           required />
         </div>
